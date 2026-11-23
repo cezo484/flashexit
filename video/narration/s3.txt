@@ -1,0 +1,1 @@
+FlashExit removes the middleman. A reactive contract on Lasna watches Uniswap v4 swap events on Base Sepolia directly. When the price crosses your trigger, the network itself fires a callback that sells on Unichain Sepolia. No keeper. No polling. No wallet online.

@@ -1,0 +1,1 @@
+And on Unichain Sepolia, the executor runs the swap and sends the proceeds straight to the user. From trigger to exit: measured live, in the table below.

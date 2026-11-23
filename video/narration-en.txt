@@ -1,0 +1,55 @@
+FlashExit demo narration (English, target under 3 minutes, ~330 words)
+
+[0:00 - title]
+FlashExit. A cross-chain stop-loss that fires itself, in seconds.
+
+[0:08 - the problem]
+If your tokens live on one chain and the price moves on another,
+a stop-loss is only as fast as you are. Keepers poll. Humans sleep.
+By the time anyone reacts, the exit price is gone.
+
+[0:24 - the idea]
+FlashExit removes the middleman. A reactive contract on Lasna watches
+Uniswap v4 swap events on Base Sepolia directly. When the price crosses
+your trigger, the network itself fires a callback that sells on
+Unichain Sepolia. No keeper. No polling. No wallet online.
+
+[0:44 - the order]
+Here is the order: sell one hundred FLASH if the price falls eight
+percent below the pool price. A minimum output guards against slippage,
+and a deadline makes the order expire on its own. The tokens are
+already deposited, so the exit needs no approval at trigger time.
+
+[1:04 - the trigger]
+Now the trigger. A large swap pushes the Base pool price down
+fifteen percent, far past the trigger.
+
+[1:14 - the reaction]
+Watch Lasna. The reactive contract sees the swap event, marks the
+order triggered, and requests the callback.
+
+[1:24 - the exit]
+And on Unichain Sepolia, the executor runs the swap and sends the
+proceeds straight to the user. From trigger to exit: measured live,
+in the table below.
+
+[1:40 - the safeguards]
+Three safeguards. One: each order fires exactly once, even in a
+volatile pool. Two: if the output falls below your minimum, the
+callback reverts and your deposit stays untouched. Three: expired
+orders are skipped, never executed.
+
+[2:00 - take-profit]
+It works both ways. A take-profit order fires when the price rises
+past its trigger, same flow, same speed.
+
+[2:12 - close]
+FlashExit: set the trigger, walk away, and let the network watch
+the market for you. Built for the Reactive Omni Buildathon,
+Track One: Every Second Counts.
+
+---
+Screencast plan: terminal (forge test + deploy), explorer pages for the
+three chains (Base trigger tx, Lasna OrderTriggered, Unichain ExitExecuted),
+latency table overlay. Narration via Piper (en_US voice), assembled with ffmpeg.
+NEVER use media.generate_video (region-blocked).

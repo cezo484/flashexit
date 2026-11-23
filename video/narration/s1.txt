@@ -1,0 +1,1 @@
+FlashExit. A cross-chain stop-loss that fires itself, in seconds.

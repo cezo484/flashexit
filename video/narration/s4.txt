@@ -1,0 +1,1 @@
+Here is the order: sell one hundred FLASH if the price falls eight percent below the pool price. A minimum output guards against slippage, and a deadline makes the order expire on its own. The tokens are already deposited, so the exit needs no approval at trigger time.

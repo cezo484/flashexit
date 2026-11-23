@@ -1,0 +1,1 @@
+It works both ways. A take-profit order fires when the price rises past its trigger, same flow, same speed.

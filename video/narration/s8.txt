@@ -1,0 +1,1 @@
+Three safeguards. One: each order fires exactly once, even in a volatile pool. Two: if the output falls below your minimum, the callback reverts and your deposit stays untouched. Three: expired orders are skipped, never executed.

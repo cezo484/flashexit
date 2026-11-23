@@ -1,0 +1,1 @@
+If your tokens live on one chain and the price moves on another, a stop-loss is only as fast as you are. Keepers poll. Humans sleep. By the time anyone reacts, the exit price is gone.
